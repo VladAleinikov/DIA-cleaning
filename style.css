@@ -97,10 +97,13 @@ h3 {
 }
 
 /*---------------------------------------- Стили контейнера ----------------------------------------*/
-
-.container {
-      max-width: 1920px;
+header,
+section {
       padding: 0 20px;
+}
+.container {
+      max-width: 1880px;
+      padding: 0;
       margin: auto;
 }
 
@@ -245,6 +248,7 @@ textarea:not(:valid)::after {
 }
 
 /*---------------------------------------- Стили кнопкок пагинации ----------------------------------------*/
+
 .controls__left,
 .controls__right {
       width: 42px;
@@ -255,5 +259,39 @@ textarea:not(:valid)::after {
 }
 .controls__left.disabled,
 .controls__right.disabled {
-      background: #FA626B;
+      background: #fa626b;
+}
+
+/*---------------------------------------- Стили кнопкок пагинации ----------------------------------------*/
+
+.header-container {
+      display: flex;
+      align-items: center;
+      padding: 14px 280px;
+      background: #fff;
+      border-radius: 0px 0px 12px 12px;
+      backdrop-filter: blur(15px);
+}
+.header__logo {
+      margin-right: 60px;
+}
+.nav__links {
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+}
+.links__link a {
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: 0.5s;
+}
+.links__link a:hover,
+.links__link a:active {
+      color: #e30613;
+}
+.links__link a:disabled {
+      color: #f0f0f0;
+}
+.header__contacts {
+      margin-left: auto;
 }
