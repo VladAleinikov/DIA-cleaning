@@ -12,13 +12,10 @@
       color: #2d2d2d;
       text-decoration: none;
       font-family: Manrope;
-      font-size: 1rem;
+      font-size: 16px;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
-}
-html {
-      font-size: 16px;
 }
 body {
       position: relative;
@@ -35,27 +32,34 @@ li {
 a {
       text-decoration: none;
 }
+/*---------------------------------------- Нормирующие стили <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      * {
+            font-size: 15px;
+      }
+}
 
 /*---------------------------------------- Типография ----------------------------------------*/
 
 h1 {
       font-family: Unbounded;
-      font-size: 3.44rem;
+      font-size: 55px;
       font-weight: 700;
       text-transform: uppercase;
+      text-align: center;
 }
 
 h2 {
       color: #373737;
       font-family: Unbounded;
-      font-size: 1.56rem;
+      font-size: 25px;
 }
 
 h3 {
       position: relative;
       padding-left: 15px;
       color: #373737;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
 }
@@ -72,7 +76,7 @@ h3::before {
 
 .subtitle-1 {
       color: #373737;
-      font-size: 1.25rem;
+      font-size: 20px;
       font-weight: 600;
       text-transform: uppercase;
 }
@@ -80,43 +84,71 @@ h3::before {
 .subtitle-2 {
       color: #373737;
       font-family: Unbounded;
-      font-size: 1.13rem;
+      font-size: 18px;
 }
 
 .subtitle-3 {
       color: #373737;
-      font-size: 1.56rem;
+      font-size: 25px;
       font-weight: 700;
       text-transform: uppercase;
 }
 
 .subtitle-4 {
       color: #373737;
-      font-size: 1.25rem;
+      font-size: 20px;
       font-weight: 600;
       text-transform: lowercase;
 }
-
 .cuption-1 {
       color: #373737;
-      font-size: 0.875rem;
+      font-size: 14px;
       font-weight: 400;
 }
 .cuption-2 {
       color: #373737;
       font-family: Unbounded;
-      font-size: 0.94rem;
+      font-size: 15px;
+}
+/*---------------------------------------- Типография <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      h1 {
+            font-size: 43px;
+      }
+
+      h2 {
+            font-size: 20px;
+      }
+
+      .subtitle-1 {
+            font-size: 18px;
+      }
+
+      .subtitle-2 {
+            font-size: 17px;
+      }
+
+      .cuption-2 {
+            font-size: 14px;
+      }
 }
 
 /*---------------------------------------- Стили контейнера ----------------------------------------*/
 header,
 section {
-      padding: 0 20px;
+      margin: 0 20px;
 }
 .container {
-      max-width: 1880px;
+      max-width: 1320px;
       padding: 0;
       margin: auto;
+}
+/*---------------------------------------- Стили контейнера <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      header,
+      section {
+            margin: 0 50px;
+      }
 }
 
 /*---------------------------------------- Стили полей ввода ----------------------------------------*/
@@ -154,7 +186,7 @@ textarea::after {
       opacity: 0;
 
       color: #fa626b;
-      font-size: 0.875rem;
+      font-size: 14px;
       font-weight: 400;
 }
 input:not(:valid)::after,
@@ -179,6 +211,7 @@ textarea:not(:valid)::after {
       transition: 0.5s;
 
       color: #fff;
+      font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
 }
@@ -210,9 +243,10 @@ textarea:not(:valid)::after {
 
       color: #e30613;
       font-family: Unbounded;
-      font-size: 1.13rem;
+      font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
+      white-space: nowrap;
 }
 
 .btn-outline:hover,
@@ -225,6 +259,12 @@ textarea:not(:valid)::after {
       background: #f0f0f0;
       border: none;
       color: #fff;
+}
+/*---------------------------------------- Стили кнопок <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .btn-outline {
+            font-size: 17px;
+      }
 }
 
 /*---------------------------------------- Стили соц сетей ----------------------------------------*/
@@ -275,21 +315,31 @@ textarea:not(:valid)::after {
 
 /*---------------------------------------- Стили шапки ----------------------------------------*/
 
-.header-container {
-      display: flex;
-      align-items: center;
-      padding: 14px 280px;
+.header {
       background: #fff;
       border-radius: 0px 0px 12px 12px;
       backdrop-filter: blur(15px);
+      padding: 0 20px;
+}
+.header-container {
+      padding: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
 }
 .header__logo {
       margin-right: 60px;
 }
+.header__nav {
+      max-width: 643px;
+      width: 100%;
+}
 .nav__links {
       display: flex;
       flex-direction: row;
-      gap: 36px;
+      justify-content: space-between;
+      gap: 10px;
 }
 .links__link a {
       font-weight: 400;
@@ -306,6 +356,15 @@ textarea:not(:valid)::after {
 .header__contacts {
       margin-left: auto;
 }
+/*---------------------------------------- Стили шапки <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .header__logo {
+            margin-right: unset;
+      }
+      .header__contacts {
+            margin-left: unset;
+      }
+}
 
 /*---------------------------------------- Стили hero ----------------------------------------*/
 
@@ -316,14 +375,23 @@ textarea:not(:valid)::after {
       background-image: url("./assets/bg/hero-bg.jpg");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
       border-radius: 12px;
 
+      max-width: 1880px;
       height: 830px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 40px;
+}
+/*---------------------------------------- Стили hero <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .hero-container {
+            height: 707px;
+            gap: 30px;
+      }
 }
 
 /*---------------------------------------- Стили секции наши услуги ----------------------------------------*/
@@ -332,7 +400,6 @@ textarea:not(:valid)::after {
       margin-top: 120px;
 }
 .services-container {
-      max-width: 1320px;
       display: flex;
       flex-direction: column;
       align-items: start;
@@ -350,7 +417,8 @@ textarea:not(:valid)::after {
       flex-wrap: wrap;
 }
 .services__item {
-      width: 315px;
+      max-width: 315px;
+      width: calc((100% - 60px) * 0.25);
       height: 182px;
       padding: 20px;
       display: flex;
@@ -380,6 +448,15 @@ textarea:not(:valid)::after {
       width: 100%;
       color: #fff;
 }
+/*---------------------------------------- Стили секции наши услуги <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .services {
+            margin-top: 100px;
+      }
+      .services__description {
+            margin-bottom: 10px;
+      }
+}
 
 /*---------------------------------------- Стили секции виды услуг ----------------------------------------*/
 
@@ -387,7 +464,6 @@ textarea:not(:valid)::after {
       margin-top: 120px;
 }
 .services-types-container {
-      max-width: 1320px;
       display: flex;
       flex-direction: column;
       align-items: start;
@@ -402,12 +478,14 @@ textarea:not(:valid)::after {
 }
 .services-types__type {
       position: relative;
-      width: 425px;
+      max-width: 425px;
+      width: calc((100% - 40px) * 0.33);
       height: 266px;
       padding: 20px;
       display: flex;
       justify-content: end;
       align-items: end;
+      border-radius: 12px;
       overflow: hidden;
 }
 .type__bg {
@@ -427,16 +505,26 @@ textarea:not(:valid)::after {
 .services-types__btn {
       align-self: center;
 }
-
-/*---------------------------------------- Стили секции виды услуг ----------------------------------------*/
+/*---------------------------------------- Стили секции виды услуги <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .services-types {
+            margin-top: 100px;
+      }
+      .services-types__type{
+            height: 232px;
+      }
+      .type__name{
+            padding: 15px;
+      }
+}
+/*---------------------------------------- Стили подвала ----------------------------------------*/
 
 .footer {
       margin-top: 120px;
+      padding: 0 20px;
       background: #fff;
 }
 .footer-container {
-      max-width: 1360px;
-      padding: 0 20px;
       padding-top: 70px;
       padding-bottom: 30px;
       display: flex;
@@ -446,12 +534,10 @@ textarea:not(:valid)::after {
 .footer-content {
       display: flex;
       flex-direction: row;
-      justify-content: end;
+      justify-content: space-between;
       align-items: start;
-      gap: 215px;
 }
 .footer__logo {
-      margin-right: auto;
       min-width: 252px;
       display: flex;
       flex-direction: column;
@@ -493,11 +579,12 @@ textarea:not(:valid)::after {
       gap: 10px;
 }
 .footer__copyright {
+      max-width: 812px;
       width: 100%;
       padding-top: 20px;
       border-top: 1px solid #f0f0f0;
       display: flex;
-      gap: 316px;
+      justify-content: space-between;
       flex-wrap: wrap;
 }
 .footer__privacy-policy {
@@ -505,4 +592,10 @@ textarea:not(:valid)::after {
 }
 .footer__privacy-policy:hover {
       color: #e30613;
+}
+/*---------------------------------------- Стили подвала <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .footer {
+            margin-top: 100px;
+      } 
 }
