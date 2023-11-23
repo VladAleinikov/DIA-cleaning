@@ -11,6 +11,10 @@
       border: none;
       color: #2d2d2d;
       text-decoration: none;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
 }
 html {
       font-size: 16px;
@@ -18,11 +22,6 @@ html {
 body {
       position: relative;
       background: #f3f3f3;
-
-      font-family: Manrope;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%;
 }
 img {
       width: 100%;
