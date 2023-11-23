@@ -242,7 +242,6 @@ textarea:not(:valid)::after {
       backdrop-filter: blur(10px);
 }
 .social__link path {
-      fill: #e30613;
       transition: 0.5s;
 }
 
