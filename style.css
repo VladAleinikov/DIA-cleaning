@@ -12,6 +12,7 @@
       color: #2d2d2d;
       text-decoration: none;
       font-family: Manrope;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
@@ -381,6 +382,7 @@ textarea:not(:valid)::after {
 }
 
 /*---------------------------------------- Стили секции виды услуг ----------------------------------------*/
+
 .services-types {
       margin-top: 120px;
 }
@@ -422,6 +424,85 @@ textarea:not(:valid)::after {
       background: rgba(243, 243, 243, 0.3);
       backdrop-filter: blur(18.65px);
 }
-.services-types__btn{
+.services-types__btn {
       align-self: center;
+}
+
+/*---------------------------------------- Стили секции виды услуг ----------------------------------------*/
+
+.footer {
+      margin-top: 120px;
+      background: #fff;
+}
+.footer-container {
+      max-width: 1360px;
+      padding: 0 20px;
+      padding-top: 70px;
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 57px;
+}
+.footer-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: start;
+      gap: 215px;
+}
+.footer__logo {
+      margin-right: auto;
+      min-width: 252px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 42px;
+}
+.footer__logo img {
+      width: 169px;
+      height: 76px;
+}
+.nav__title {
+      color: #e30613;
+      margin-bottom: 30px;
+}
+.footer__nav .nav__links {
+      flex-direction: column;
+      gap: 14px;
+}
+.footer__contacts {
+      display: flex;
+      flex-direction: column;
+}
+.contacts__title {
+      color: #e30613;
+      margin-bottom: 30px;
+}
+.contacts__tel {
+      margin-bottom: 14px;
+      transition: 0.5s;
+}
+.contacts__tel:hover {
+      color: #e30613;
+}
+.contacts__address {
+      margin-bottom: 20px;
+}
+.contacts__social {
+      display: flex;
+      gap: 10px;
+}
+.footer__copyright {
+      width: 100%;
+      padding-top: 20px;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      gap: 316px;
+      flex-wrap: wrap;
+}
+.footer__privacy-policy {
+      transition: 0.5s;
+}
+.footer__privacy-policy:hover {
+      color: #e30613;
 }
