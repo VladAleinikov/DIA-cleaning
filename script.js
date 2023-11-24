@@ -63,3 +63,14 @@ try {
 } catch (e) {
 
 }
+
+
+/*---------------------------------------- Бургер меню ----------------------------------------*/
+const burger = document.getElementById("header__burger");
+const nav = document.getElementById("header__nav");
+
+burger.addEventListener("click", e => {
+      burger.classList.toggle("active")
+      nav.classList.toggle("active");
+      document.body.classList.toggle("hide");
+})
