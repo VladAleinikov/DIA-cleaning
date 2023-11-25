@@ -17,14 +17,18 @@
       font-weight: 500;
       line-height: 140%;
 }
+html {
+      overflow-x: hidden;
+}
 body {
       position: relative;
-      background: #f3f3f3;
       overflow-x: hidden;
+      background: #f3f3f3;
 }
 /* При открытии модального окна */
 body.hide {
       overflow: hidden;
+      height: 100vh;
 }
 img {
       width: 100%;
@@ -36,6 +40,9 @@ li {
 }
 a {
       text-decoration: none;
+}
+b {
+      font-weight: 600;
 }
 /*---------------------------------------- Нормирующие стили <1280px ----------------------------------------*/
 @media (max-width: 1280px) {
@@ -130,6 +137,9 @@ h4 {
       h2 {
             font-size: 20px;
       }
+      h4 {
+            font-size: 20px;
+      }
 
       .subtitle-1 {
             font-size: 18px;
@@ -141,6 +151,20 @@ h4 {
 
       .cuption-2 {
             font-size: 14px;
+      }
+}
+/*---------------------------------------- Типография <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      h1 {
+            font-size: 20px;
+      }
+
+      h2 {
+            font-size: 17px;
+      }
+
+      .cuption-2 {
+            font-size: 15px;
       }
 }
 
@@ -159,6 +183,13 @@ section {
       header,
       section {
             margin: 0 50px;
+      }
+}
+/*---------------------------------------- Стили контейнера <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      header,
+      section {
+            margin: 0 20px;
       }
 }
 
@@ -243,7 +274,9 @@ textarea:disabled::placeholder {
       background: #fff;
       border-radius: 5px;
 }
-.btn__img svg {
+.btn__img img {
+      width: unset;
+      height: unset;
       transform: rotate(-45deg);
       transition: 0.5s;
 }
@@ -251,7 +284,7 @@ textarea:disabled::placeholder {
 .btn:hover {
       background-position: 0%;
 }
-.btn:hover .btn__img svg {
+.btn:hover .btn__img img {
       transform: rotate(0deg);
 }
 .btn-outline {
@@ -372,6 +405,9 @@ textarea:disabled::placeholder {
 .links__link a:disabled {
       color: #f0f0f0;
 }
+.nav__contacts {
+      display: none;
+}
 .header__contacts {
       margin-left: auto;
 }
@@ -416,6 +452,8 @@ textarea:disabled::placeholder {
             margin: 0 20px;
             padding: 0 10px;
             height: 50px;
+            position: relative;
+            z-index: 1;
       }
       .header-container {
             padding: 10px 0;
@@ -457,7 +495,10 @@ textarea:disabled::placeholder {
       .header__nav.active {
             left: 0px;
       }
-      .btn-outline{
+      .nav__contacts {
+            display: block;
+      }
+      .btn-outline {
             border: none;
             padding: 0;
             font-size: 14px;
@@ -469,6 +510,7 @@ textarea:disabled::placeholder {
 .footer {
       margin-top: 120px;
       padding: 0 20px;
+      border-radius: 12px 12px 0px 0px;
       background: #fff;
 }
 .footer-container {
@@ -546,6 +588,60 @@ textarea:disabled::placeholder {
             margin-top: 100px;
       }
 }
+/*---------------------------------------- Стили подвала <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .footer {
+            margin-top: 60px;
+      }
+      .footer-container {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            gap: 40px;
+      }
+      .footer-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+      }
+      .footer__logo {
+            max-width: unset;
+            width: 100%;
+            padding-bottom: 40px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+      }
+      .footer__nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+      .footer__nav .nav__links {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+      .footer__contacts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+      .footer__copyright {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+      .footer__privacy-policy {
+            transition: 0.5s;
+      }
+      .footer__privacy-policy:hover {
+            color: #e30613;
+      }
+}
 
 /*---------------------------------------- Стили модального окна ----------------------------------------*/
 
@@ -619,7 +715,25 @@ textarea:disabled::placeholder {
 .successful-request__text {
       text-align: center;
 }
-.
+/*---------------------------------------- Стили модального окна <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .modal {
+            padding: 20px;
+      }
+      .cleaning-order,
+      .successful-request {
+            max-width: unset;
+            width: calc(100% - 40px);
+            margin: 20px;
+            left: 0;
+      }
+      .cleaning-order {
+            padding-top: 70px;
+      }
+      .successful-request {
+            padding-top: 40px;
+      }
+}
 
 /*---------------------------------------- Стили hero ----------------------------------------*/
 
@@ -644,8 +758,19 @@ textarea:disabled::placeholder {
 /*---------------------------------------- Стили hero <1280px ----------------------------------------*/
 @media (max-width: 1280px) {
       .hero-container {
+            background-image: url("./assets/bg/hero-bg-1280.jpg");
             height: 707px;
             gap: 30px;
+      }
+}
+/*---------------------------------------- Стили hero <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .hero {
+            margin-top: 14px;
+      }
+      .hero-container {
+            background-image: url("./assets/bg/hero-bg-768.jpg");
+            height: 606px;
       }
 }
 
@@ -712,6 +837,34 @@ textarea:disabled::placeholder {
             margin-bottom: 10px;
       }
 }
+/*---------------------------------------- Стили секции наши услуги <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .services {
+            margin-top: 60px;
+      }
+      .services-container {
+            gap: 20px;
+      }
+      .services__description {
+            margin-bottom: 0px;
+      }
+      .services__list {
+            width: 100%;
+            flex-direction: column;
+            gap: 14px;
+      }
+      .services__item {
+            max-width: unset;
+            width: 100%;
+            height: 154px;
+            padding: 15px;
+      }
+      .item__icon {
+            width: 42px;
+            height: 42px;
+            padding: 8px;
+      }
+}
 
 /*---------------------------------------- Стили секции виды услуг ----------------------------------------*/
 
@@ -769,6 +922,32 @@ textarea:disabled::placeholder {
             height: 232px;
       }
       .type__name {
+            padding: 15px;
+      }
+}
+/*---------------------------------------- Стили секции виды услуги <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .services-types {
+            margin-top: 60px;
+      }
+      .services-types-container {
+            gap: 20px;
+      }
+      .services-types__link{
+            width: 100%;
+      }
+      .services-types__list {
+            flex-direction: column;
+            gap: 14px;
+      }
+      .services-types__type {
+            max-width: unset;
+            width: 100%;
+            height: 232px;
+            padding: 15px;
+      }
+      .type__name {
+            width: 221px;
             padding: 15px;
       }
 }
