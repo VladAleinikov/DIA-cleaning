@@ -1,6 +1,6 @@
 /*---------------------------------------- Подключение шрифтов ----------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Unbounded:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap");
 
 /*---------------------------------------- Нормирующи стили ----------------------------------------*/
 
@@ -389,6 +389,18 @@ textarea:disabled::placeholder {
 }
 .breadcrumbs__page-name {
       color: #e30613;
+}
+/*---------------------------------------- Стили хлебных крошек <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .breadcrumbs {
+            margin-top: 20px;
+      }
+}
+/*---------------------------------------- Стили хлебных крошек <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .breadcrumbs {
+            margin-top: 14px;
+      }
 }
 
 /*---------------------------------------- Стили шапки ----------------------------------------*/
@@ -985,3 +997,147 @@ textarea:disabled::placeholder {
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------- Страница контакты ---------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------- Стили секции контакты ----------------------------------------*/
+
+.contacts {
+      margin-top: 50px;
+}
+.contacts-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+}
+.contacts__our-contacts {
+      width: calc((100% - 20px) * 0.36);
+      min-width: 330px;
+      height: 230px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      border-radius: 12px;
+      background: linear-gradient(237deg, #fb626b 10.3%, #ee3b46 53.61%, #e30613 95.48%);
+}
+.our-contacts__title {
+      color: #fff;
+}
+.our-contacts__title::before {
+      background: #fff;
+}
+.our-contacts__info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+}
+.info__tel,
+.info__mail {
+      display: flex;
+      align-items: center;
+      color: #fff;
+}
+.info__mail {
+      font-weight: 600;
+      font-size: 20px;
+}
+.tel__icon,
+.mail__icon {
+      margin-right: 16px;
+      width: 31px;
+      height: 31px;
+}
+.contacts__contacts-right {
+      width: calc((100% - 20px) * 0.64);
+      min-width: 640px;
+      height: 230px;
+      padding: 30px 60px 30px 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 12px;
+      background: #fff;
+}
+.contacts-right__address {
+      max-width: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+.address__info {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 160%; /* 32px */
+      text-transform: uppercase;
+}
+.contacts-right__separator {
+      width: 1px;
+      height: 100%;
+      background: #f0f0f0;
+}
+.contacts-right__social {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+/*---------------------------------------- Стили секции контакты <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .contacts {
+            margin-top: 40px;
+      }
+      .contacts__our-contacts {
+            padding: 30px;
+      }
+      .contacts__contacts-right {
+            padding: 30px;
+      }
+}
+/*---------------------------------------- Стили секции контакты <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .contacts {
+            margin-top: 40px;
+      }
+      .contacts-container {
+            flex-direction: column;
+            gap: 14px;
+      }
+      .contacts__our-contacts {
+            max-width: unset;
+            width: 100%;
+            padding: 20px 15px;
+      }
+      .info__mail {
+            font-weight: 600;
+            font-size: 18px;
+      }
+      .contacts__contacts-right {
+            width: 100%;
+            min-width: unset;
+            height: fit-content;
+            padding: 20px 15px;
+            flex-direction: column;
+            gap: 20px;
+      }
+      .contacts-right__address {
+            max-width: 310px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 50px;
+      }
+      .address__info {
+            font-size: 18px;
+      }
+      .contacts-right__separator {
+            width: 100%;
+            height: 1px;
+      }
+      .contacts-right__social {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 50px;
+      }
+}
