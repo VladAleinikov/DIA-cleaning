@@ -361,11 +361,12 @@ textarea:disabled::placeholder {
       border-radius: 5px;
       background: #e30613;
 }
-.controls__left{
+.controls__left {
       transform: rotate(180deg);
 }
 .controls__left.disabled,
 .controls__right.disabled {
+      cursor: default;
       background: #fa626b;
 }
 
@@ -1220,7 +1221,7 @@ textarea:disabled::placeholder {
       width: 100%;
       height: 100%;
 }
-.item__img-mob{
+.item__img-mob {
       display: none;
 }
 .item__name {
@@ -1297,10 +1298,62 @@ textarea:disabled::placeholder {
       .about__item:nth-child(1) {
             padding: 15px;
       }
-      .item__img{
+      .item__img {
             display: none;
       }
-      .item__img-mob{
+      .item__img-mob {
             display: block;
       }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------- Страница отзывы ---------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------- Стили секции отзывы ----------------------------------------*/
+.sertificates {
+      margin-top: 50px;
+}
+.sertificates-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 20px;
+      overflow: hidden;
+}
+.sertificates__description {
+      margin-top: 10px;
+      margin-bottom: 20px;
+}
+.sertificates__controls {
+      display: flex;
+      align-self: end;
+      gap: 20px;
+}
+.sertificates__slider{
+      position: relative;
+      height: 660px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+}
+.sertificates__slide {
+      position: absolute;
+      max-width: 427px;
+      min-width: calc((101% - 40px ) * 0.33);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px;
+      border-radius: 12px;
+      background:  linear-gradient(237deg, #fb626b 10.3%, #ee3b46 53.61%, #e30613 95.48%);
+      transition: .5s;
+}
+.sertificates__slide img{
+      object-fit: contain;
+}
+.slide__title{
+      color: #fff;
+      height: 50px;
 }

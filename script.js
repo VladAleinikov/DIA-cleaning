@@ -74,3 +74,41 @@ burger.addEventListener("click", e => {
       nav.classList.toggle("active");
       document.body.classList.toggle("hide");
 })
+
+
+/*---------------------------------------- Слайдер отзывов ----------------------------------------*/
+const sertificatesSlides = [...document.querySelectorAll(".sertificates__slide")];
+const sertificatesRight = document.getElementById("sertificates-right");
+const sertificatesLeft = document.getElementById("sertificates-left")
+let sertificatesSlide = 0;
+const showsertificates = 3;
+
+const setSlides = () =>{
+      sertificatesSlides.map((slide, id) => {
+            slide.style.left = "calc(((101% - 40px ) * 0.33 + 20px) * " + (id - sertificatesSlide) + ")";
+      })
+}
+setSlides();
+
+sertificatesRight.addEventListener("click", e => {
+      sertificatesLeft.classList.remove("disabled")
+      if (sertificatesSlide == sertificatesSlides.length - showsertificates) {
+            return;
+      }
+      sertificatesSlide += 1;
+      setSlides();
+      if (sertificatesSlide == sertificatesSlides.length - showsertificates) {
+            sertificatesRight.classList.add("disabled");
+      }
+})
+sertificatesLeft.addEventListener("click", e => {
+      sertificatesRight.classList.remove("disabled")
+      if (sertificatesSlide == 0) {
+            return;
+      }
+      sertificatesSlide -= 1;
+      setSlides();
+      if (sertificatesSlide == 0) {
+            sertificatesLeft.classList.add("disabled")
+      }
+})
