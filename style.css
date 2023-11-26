@@ -365,6 +365,32 @@ textarea:disabled::placeholder {
       background: #fa626b;
 }
 
+/*---------------------------------------- Стили хлебных крошек ----------------------------------------*/
+
+.breadcrumbs {
+      margin-top: 40px;
+}
+.breadcrumbs-container {
+      display: flex;
+      font-display: row;
+      gap: 10px;
+}
+.breadcrumbs-container span,
+.breadcrumbs__link {
+      text-transform: uppercase;
+      transition: 0.5s;
+}
+.breadcrumbs__link {
+      font-weight: 400;
+}
+.breadcrumbs__link:hover,
+.breadcrumbs__link:active {
+      color: #e30613;
+}
+.breadcrumbs__page-name {
+      color: #e30613;
+}
+
 /*---------------------------------------- Стили шапки ----------------------------------------*/
 
 .header {
@@ -937,7 +963,7 @@ textarea:disabled::placeholder {
       .services-types-container {
             gap: 20px;
       }
-      .services-types__link{
+      .services-types__link {
             width: 100%;
       }
       .services-types__list {
