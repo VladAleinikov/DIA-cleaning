@@ -1141,3 +1141,36 @@ textarea:disabled::placeholder {
             gap: 50px;
       }
 }
+
+/*---------------------------------------- Стили секции карта ----------------------------------------*/
+
+.map{
+      margin-top: 120px;
+}
+.map-container{
+      height: 500px;
+      border-radius: 12px;
+      background-image: url("./assets/bg/map.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+}
+/*---------------------------------------- Стили секции карта <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .map{
+            margin-top: 50px;
+      }
+      .map-container{
+            height: 430px;
+            background-image: url("./assets/bg/map-1280.jpg");
+      }
+}
+/*---------------------------------------- Стили секции карта <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .map{
+            margin-top: 30px;
+      }
+      .map-container{
+            background-image: url("./assets/bg/map-768.jpg");
+      }
+}
