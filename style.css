@@ -1144,10 +1144,10 @@ textarea:disabled::placeholder {
 
 /*---------------------------------------- Стили секции карта ----------------------------------------*/
 
-.map{
+.map {
       margin-top: 120px;
 }
-.map-container{
+.map-container {
       height: 500px;
       border-radius: 12px;
       background-image: url("./assets/bg/map.jpg");
@@ -1157,20 +1157,146 @@ textarea:disabled::placeholder {
 }
 /*---------------------------------------- Стили секции карта <1280px ----------------------------------------*/
 @media (max-width: 1280px) {
-      .map{
+      .map {
             margin-top: 50px;
       }
-      .map-container{
+      .map-container {
             height: 430px;
             background-image: url("./assets/bg/map-1280.jpg");
       }
 }
 /*---------------------------------------- Стили секции карта <768px ----------------------------------------*/
 @media (max-width: 768px) {
-      .map{
+      .map {
             margin-top: 30px;
       }
-      .map-container{
+      .map-container {
             background-image: url("./assets/bg/map-768.jpg");
+      }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------- Страница о компании ---------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------- Стили секции о компании ----------------------------------------*/
+.about {
+      margin-top: 50px;
+}
+.about-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+}
+.about__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 576px 408px 282px;
+      grid-template-areas:
+            "a a"
+            "b c"
+            "d e";
+      gap: 20px;
+}
+.about__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      background: linear-gradient(237deg, #fb626b 10.3%, #ee3b46 53.61%, #e30613 95.48%);
+      overflow: hidden;
+}
+.item__img,
+.item__img-mob {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+.item__img-mob{
+      display: none;
+}
+.item__name {
+      color: #fff;
+      max-width: 565px;
+      padding: 40px;
+      border-radius: 12px;
+      background: rgba(45, 45, 45, 0.4);
+      backdrop-filter: blur(18.65px);
+}
+.item__title,
+.item__text {
+      color: #fff;
+}
+.about__item:nth-child(1) {
+      grid-area: a;
+}
+.about__item:nth-child(2) {
+      grid-area: b;
+}
+.about__item:nth-child(3) {
+      grid-area: c;
+}
+.about__item:nth-child(4) {
+      grid-area: d;
+}
+.about__item:nth-child(5) {
+      grid-area: e;
+}
+/*---------------------------------------- Стили секции о компании <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .about {
+            margin-top: 40px;
+      }
+      .about__list {
+            grid-template-rows: 510px max-content 282px;
+      }
+      .item__name {
+            max-width: 464px;
+            padding: 30px;
+      }
+      .about__item:nth-child(3) {
+            min-height: 388px;
+      }
+}
+/*---------------------------------------- Стили секции о компании <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .about {
+            margin-top: 20px;
+      }
+      .about-container {
+            gap: 20px;
+      }
+      .about__list {
+            grid-template-columns: 100%;
+            grid-template-rows: 360px 360px 522px 360px 238px;
+            grid-template-areas: "a" "b" "c" "e" "d";
+            gap: 14px;
+      }
+      .about__item {
+            gap: 40px;
+            padding: 20px 15px;
+      }
+      .about__item:nth-child(3) {
+            min-height: unset;
+      }
+      .item__name {
+            padding: 15px;
+      }
+      .item__title,
+      .item__text {
+            color: #fff;
+      }
+      .about__item:nth-child(1) {
+            padding: 15px;
+      }
+      .item__img{
+            display: none;
+      }
+      .item__img-mob{
+            display: block;
       }
 }
