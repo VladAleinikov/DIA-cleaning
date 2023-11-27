@@ -980,7 +980,8 @@ textarea:disabled::placeholder {
       .services-types-container {
             gap: 20px;
       }
-      .services-types__link {
+      .services-types__link,
+      .services-types__list {
             width: 100%;
       }
       .services-types__list {
@@ -1390,7 +1391,7 @@ textarea:disabled::placeholder {
       border-radius: 12px;
       transition: 0.5s;
 }
-.comments__comment:nth-child(1){
+.comments__comment:nth-child(1) {
       background: linear-gradient(237deg, #fb626b 10.3%, #ee3b46 53.61%, #e30613 95.48%);
 }
 .comments__comment:nth-child(1) .comment__name,
@@ -1421,16 +1422,67 @@ textarea:disabled::placeholder {
 .comments__comment:nth-child(1) .commnet__more {
       border-bottom: 1px solid #fff;
 }
-.comments__all{
+.comments__all {
       margin: auto;
 }
-.comments__separator{
-      content: '';
+.comments__separator {
+      content: "";
       width: 100%;
 }
-.comments__thanks{
+.comments__thanks {
       margin: auto;
       margin-top: 60px;
       max-width: 992px;
       text-align: center;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------- Страница услуги и цены ---------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------- Стили виды услуг ----------------------------------------*/
+.services-page {
+      margin-top: 50px;
+}
+.services-page .services-types__description {
+      margin-bottom: 20px;
+}
+.services-page .services-types__type {
+      height: 420px;
+}
+.services-page .type__name {
+      min-height: 193px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+}
+.type__name .subtitle-2 {
+      justify-self: start;
+}
+.type__name p {
+      color: #fff;
+}
+
+/*---------------------------------------- Стили виды услуг <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .services-page {
+            margin-top: 40px;
+      }
+      .services-page .services-types__type {
+            height: 370px;
+      }
+      .services-page .services-types__description {
+            margin-bottom: 0px;
+      }
+}
+/*---------------------------------------- Стили виды услуг <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .services-page {
+            margin-top: 20px;
+            gap: 20px;
+      }
+      .services-page .services-types__type {
+            height: 300px;
+      }
 }
