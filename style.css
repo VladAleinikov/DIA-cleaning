@@ -1520,7 +1520,78 @@ textarea:disabled::placeholder {
       .privacy-policy {
             margin-top: 20px;
       }
-      .privacy-policy__title{
+      .privacy-policy__title {
             margin-bottom: -10px;
+      }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------- Страница 4004 ---------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------- Стили 404 ----------------------------------------*/
+.err404 {
+      position: relative;
+      margin: auto;
+      max-width: 863px;
+      height: 606px;
+      margin-top: 110px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 40px;
+}
+.err404__title {
+      color: #e30613;
+      font-family: Unbounded;
+      font-size: 170px;
+}
+.err404__btn {
+      margin-top: 40px;
+}
+.err404__img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: unset;
+      object-fit: contain;
+}
+
+/*---------------------------------------- Стили 404 <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .err404 {
+            margin-top: 90px;
+      }
+      .err404__title {
+            font-size: 130px;
+      }
+}
+/*---------------------------------------- Стили 404 <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .err404 {
+            height: 535px;
+            margin-top: 60px;
+            padding: 0 20px;
+            justify-content: start;
+            align-items: center;
+            gap: 20px;
+      }
+      .err404__title {
+            font-size: 90px;
+            line-height: 75%;
+      }
+      .err404__btn {
+            margin-top: 30px;
+      }
+      .err404__img {
+            position: absolute;
+            right: calc(50% - 320px / 2);
+            top: unset;
+            bottom: 0;
+            width: 320px;
+            height: 380px;
+            z-index: -1;
       }
 }
