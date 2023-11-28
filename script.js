@@ -35,6 +35,7 @@ try {
 /*---------------------------------------- Валидация формы модального окна ----------------------------------------*/
 const inputName = document.getElementById("cleaning-order__name");
 const inputTel = document.getElementById("cleaning-order__tel");
+const inputComment = document.getElementById("cleaning-order__comment")
 const formBtn = document.getElementById("cleaning-order__btn");
 
 try {
@@ -57,7 +58,20 @@ try {
                   inputTel.closest('div').classList.add("invalid");
             }
             else {
-                  openModal(modalSuccessfulRequest);
+                  formBtn.setAttribute("dissabled", "");
+                  $.ajax({
+                        url: '/pages/sendMail.php',         /* Куда отправить запрос */
+                        method: 'post',             /* Метод запроса (post или get) */
+                        data: {
+                              name: inputName.value,
+                              tel: inputTel.value,
+                              comment: inputComment.value
+                        },     /* Данные передаваемые в массиве */
+                        success: function (data) {   /* функция которая будет выполнена после успешного запроса.  */
+                              openModal(modalSuccessfulRequest);  /* В переменной data содержится ответ от index.php. */
+                              formBtn.removeAttribute("dissabled");
+                        }
+                  });
             }
       })
 } catch (e) {
