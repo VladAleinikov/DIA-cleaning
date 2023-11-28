@@ -95,11 +95,19 @@ const sertificatesSlides = [...document.querySelectorAll(".sertificates__slide")
 const sertificatesRight = document.getElementById("sertificates-right");
 const sertificatesLeft = document.getElementById("sertificates-left")
 let sertificatesSlide = 0;
-const showsertificates = 3;
+const showsertificates = window.innerWidth > 1100 ? 3:window.innerWidth > 768 ? 2 : 1;
 
 const setSertificatesSlides = () => {
       sertificatesSlides.map((slide, id) => {
-            slide.style.left = "calc(((101% - 40px ) * 0.33 + 20px) * " + (id - sertificatesSlide) + ")";
+            if (window.innerWidth > 1100) {
+                  slide.style.left = "calc(((101% - 40px ) *  0.33 + 20px) * " + (id - sertificatesSlide) + ")";
+            }
+            else if (window.innerWidth > 768) {
+                  slide.style.left = "calc(((101% - 40px ) *  0.5 + 20px) * " + (id - sertificatesSlide) + ")";
+            }
+            else {
+                  slide.style.left = "calc((100% + 20px) * " + (id - sertificatesSlide) + "";
+            }
       })
 }
 
@@ -137,11 +145,16 @@ const commentsSlides = [...document.querySelectorAll(".comments__comment")];
 const commentsRight = document.getElementById("comments-right");
 const commentsLeft = document.getElementById("comments-left")
 let commentsSlide = 0;
-const showcomments = 3;
+const showcomments = window.innerWidth > 768 ? 3 : 1;
 
 const setCommentsSlides = () => {
       commentsSlides.map((slide, id) => {
-            slide.style.left = "calc(((101% - 40px ) * 0.33 + 20px) * " + (id - commentsSlide) + ")";
+            if (window.innerWidth > 768) {
+                  slide.style.left = "calc(((101% - 40px ) *  0.33 + 20px) * " + (id - commentsSlide) + ")";
+            }
+            else {
+                  slide.style.left = "calc((100% + 20px) * " + (id - commentsSlide) + "";
+            }
       })
 }
 try {

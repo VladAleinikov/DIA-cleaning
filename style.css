@@ -1342,6 +1342,7 @@ textarea:disabled::placeholder {
 .sertificates__slide {
       position: absolute;
       max-width: 427px;
+      width: calc((100% - 40px) * 0.33);
       min-width: calc((101% - 40px) * 0.33);
       display: flex;
       flex-direction: column;
@@ -1357,6 +1358,66 @@ textarea:disabled::placeholder {
 .slide__title {
       color: #fff;
       height: 50px;
+}
+/*---------------------------------------- Стили секции сертификаты <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .sertificates {
+            margin-top: 40px;
+      }
+      .sertificates__description {
+            margin-bottom: 10px;
+      }
+      .sertificates__slider {
+            height: 602px;
+      }
+      .sertificates__slide {
+            padding: 20px;
+      }
+}
+/*---------------------------------------- Стили секции сертификаты <1100px ----------------------------------------*/
+@media (max-width: 1100px) {
+      .sertificates__controls {
+            align-self: center;
+            order: 1;
+      }
+      .sertificates__slider {
+            align-self: center;
+            max-width: 100%;
+            width: 780px;
+            overflow: hidden;
+      }
+      .sertificates__slide {
+            width: 380px;
+            width: calc((100% - 20px) * 0.5);
+            min-width: calc((101% - 20px) * 0.5);
+            height: 602px;
+      }
+}
+/*---------------------------------------- Стили секции сертификаты <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .sertificates {
+            margin-top: 20px;
+      }
+      .sertificates__description {
+            margin-top: 0px;
+            margin-bottom: 0px;
+      }
+      .sertificates__controls {
+            align-self: center;
+            order: 1;
+      }
+      .sertificates__slider {
+            align-self: center;
+            height: 523px;
+            width: 320px;
+            overflow: hidden;
+      }
+      .sertificates__slide {
+            min-width: none;
+            max-width: none;
+            width: 320px;
+            height: 523px;
+      }
 }
 
 /*---------------------------------------- Стили секции отзывы ----------------------------------------*/
@@ -1382,6 +1443,7 @@ textarea:disabled::placeholder {
 .comments__comment {
       position: absolute;
       max-width: 427px;
+      width: calc((100% - 40px) * 0.33);
       min-width: calc((101% - 40px) * 0.33);
       padding: 30px;
       display: flex;
@@ -1434,6 +1496,57 @@ textarea:disabled::placeholder {
       margin-top: 60px;
       max-width: 992px;
       text-align: center;
+}
+
+/*---------------------------------------- Стили секции отзывы <1280px ----------------------------------------*/
+@media (max-width: 1280px) {
+      .comments {
+            margin-top: 105px;
+      }
+      .comments__thanks {
+            margin-top: 40px;
+            order: 4;
+      }
+}
+/*---------------------------------------- Стили секции отзывы <768px ----------------------------------------*/
+@media (max-width: 768px) {
+      .comments {
+            margin-top: 60px;
+      }
+      .comments-container {
+            gap: 14px;
+      }
+      .comments-container {
+            flex-direction: column;
+      }
+      .comments__title {
+            order: 0;
+      }
+      .comments__controls {
+            order: 2;
+            width: fit-content;
+            align-self: center;
+      }
+      .comments__slider {
+            margin: auto;
+            width: 320px;
+            order: 1;
+      }
+      .comments__comment {
+            max-width: none;
+            min-width: none;
+            width: 320px;
+      }
+      .comments__all {
+            display: none;
+      }
+      .comments__separator {
+            order: 3;
+      }
+      .comments__thanks {
+            margin-top: 32px;
+            order: 4;
+      }
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------*/
